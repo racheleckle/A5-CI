@@ -1,0 +1,5 @@
+edu\westga\cs3211\hi_low_game\model\GuessReport.class
+edu\westga\cs3211\hi_low_game\view\GuessReportTextifier.class
+edu\westga\cs3211\hi_low_game\view\codebehind\MainWindow.class
+edu\westga\cs3211\hi_low_game\Main.class
+edu\westga\cs3211\hi_low_game\model\HiLowGame.class

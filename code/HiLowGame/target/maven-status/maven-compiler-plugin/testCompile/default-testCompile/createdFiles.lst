@@ -1,0 +1,5 @@
+edu\westga\cs3211\hi_low_game\test\model\hi_low_game\TestCheckGuess$RandomFakeSpy.class
+edu\westga\cs3211\hi_low_game\test\model\hi_low_game\TestConstructor$RandomFakeSpy.class
+edu\westga\cs3211\hi_low_game\test\view\guess_report_textifier\TestTextifyGuessReport.class
+edu\westga\cs3211\hi_low_game\test\model\hi_low_game\TestCheckGuess.class
+edu\westga\cs3211\hi_low_game\test\model\hi_low_game\TestConstructor.class

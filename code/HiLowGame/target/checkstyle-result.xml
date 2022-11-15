@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="C:\Users\Lanthorr\Desktop\A5\HiLowGame\src\main\java\edu\westga\cs3211\hi_low_game\Main.java">
+</file>
+<file name="C:\Users\Lanthorr\Desktop\A5\HiLowGame\src\main\java\edu\westga\cs3211\hi_low_game\model\GuessReport.java">
+</file>
+<file name="C:\Users\Lanthorr\Desktop\A5\HiLowGame\src\main\java\edu\westga\cs3211\hi_low_game\model\HiLowGame.java">
+</file>
+<file name="C:\Users\Lanthorr\Desktop\A5\HiLowGame\src\main\java\edu\westga\cs3211\hi_low_game\view\codebehind\MainWindow.java">
+</file>
+<file name="C:\Users\Lanthorr\Desktop\A5\HiLowGame\src\main\java\edu\westga\cs3211\hi_low_game\view\GuessReportTextifier.java">
+</file>
+</checkstyle>

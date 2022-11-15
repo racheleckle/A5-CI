@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MainWindow.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sample-Code-Coverage-Project</a> &gt; <a href="index.source.html" class="el_package">edu.westga.cs3211.hi_low_game.view.codebehind</a> &gt; <span class="el_source">MainWindow.java</span></div><h1>MainWindow.java</h1><pre class="source lang-java linenums">package edu.westga.cs3211.hi_low_game.view.codebehind;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+
+import edu.westga.cs3211.hi_low_game.model.HiLowGame;
+import edu.westga.cs3211.hi_low_game.model.GuessReport;
+import edu.westga.cs3211.hi_low_game.view.GuessReportTextifier;
+
+/**
+ * CodeBehind To Handle Processing for the MainWindow
+ *
+ * @author	CS 3211
+ * @version Fall 2021
+ */
+<span class="nc" id="L19">public class MainWindow {       </span>
+	private HiLowGame gameManager;
+	
+	public static final String BAD_INPUT_TEXT = &quot;Guess must be a valid integer.&quot;;
+	
+	@FXML private TextField guess;
+	@FXML private TextArea result;
+	@FXML private Button makeGuessButton;
+
+	/**
+	 * Handles the game action when a user selects the makeGuess button
+	 * 
+	 * @precondition none
+	 * @postcondition calls HiLowGame::checkGuess with the provided guess and updates game state accordingly
+	 * 
+	 * @param event the ActionEvent generated when the button is pressed (not used by method)
+	 */
+	@FXML
+	public void makeGuess(ActionEvent event) {
+<span class="nc" id="L38">		int guess = -1;</span>
+		try {
+<span class="nc" id="L40">			guess = Integer.parseInt(this.guess.getText());</span>
+<span class="nc" id="L41">		} catch (NumberFormatException e) {</span>
+<span class="nc" id="L42">			this.result.setText(MainWindow.BAD_INPUT_TEXT);</span>
+<span class="nc" id="L43">			return;</span>
+<span class="nc" id="L44">		}</span>
+		
+<span class="nc" id="L46">		GuessReport result = this.gameManager.checkGuess(guess);</span>
+<span class="nc" id="L47">		String resultText = (new GuessReportTextifier()).textifyGuessReport(result);</span>
+<span class="nc" id="L48">		this.result.setText(resultText);</span>
+<span class="nc" id="L49">	}</span>
+	
+	/**
+	 * Handle initialization checks for the JavaFX components, and perform any
+	 * necessary custom initialization.
+	 * 
+	 * @precondition none
+	 * @postcondition none
+	 * 
+	 */
+	@FXML
+	public void initialize() {
+<span class="nc" id="L61">		this.gameManager = new HiLowGame();</span>
+<span class="nc" id="L62">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
